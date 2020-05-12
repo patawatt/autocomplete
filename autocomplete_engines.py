@@ -332,7 +332,7 @@ def sample_melody_autocomplete() -> None:
     for melody, _ in melodies:
         melody.play()
 
-    return names_list
+    return melodies, names_list
 
 
 if __name__ == '__main__':

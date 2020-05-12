@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c08567e2-250b-44b9-82e7-e770c76ec1c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/google_no_swears.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/google_searches.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/lotr.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/random_melodies_c_scale.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/sample_sentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/songbook.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Files/a2_sample_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Files/a2_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/autocomplete_engines.py" beforeDir="false" afterPath="$PROJECT_DIR$/autocomplete_engines.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +10,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +40,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.midi_Test">
     <configuration name="autocomplete_engines" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="autocomplete" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,11 +59,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="gui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="autocomplete" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="midi_Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="autocomplete" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/midi_Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.midi_Test" />
         <item itemvalue="Python.autocomplete_engines" />
         <item itemvalue="Python.autocomplete_engines" />
-        <item itemvalue="Python.autocomplete_engines" />
+        <item itemvalue="Python.gui" />
         <item itemvalue="Python.autocomplete_engines" />
       </list>
     </recent_temporary>
@@ -98,8 +134,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/autocomplete_engines.py</url>
-          <line>331</line>
-          <option name="timeStamp" value="5" />
+          <line>332</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
