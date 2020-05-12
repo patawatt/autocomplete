@@ -299,7 +299,9 @@ def sample_letter_autocomplete() -> List[Tuple[str, float]]:
         'autocompleter': 'compressed',
         'weight_type': 'sum'
     })
-    return engine.autocomplete('frodo d', 20)
+    word_result = engine.autocomplete('frodo d', 20)
+    print(word_result)
+    return word_result
 
 
 def sample_sentence_autocomplete() -> List[Tuple[str, float]]:
@@ -309,19 +311,28 @@ def sample_sentence_autocomplete() -> List[Tuple[str, float]]:
         'autocompleter': 'compressed',
         'weight_type': 'sum'
     })
-    return engine.autocomplete('how to', 20)
+    sentence_result = engine.autocomplete('how to', 20)
+    print(sentence_result)
+    return sentence_result
 
 
 def sample_melody_autocomplete() -> None:
     """A sample run of the melody autocomplete engine."""
     engine = MelodyAutocompleteEngine({
-        'file': 'data/random_melodies_c_scale.csv',
+        'file': 'data/songbook.csv',
         'autocompleter': 'compressed',
         'weight_type': 'sum'
     })
     melodies = engine.autocomplete([0, 0], 20)
+
+    names_list = []
+    for i in melodies:
+        names_list.append((i[0].name, i[1]))
+    print(names_list)
     for melody, _ in melodies:
         melody.play()
+
+    return names_list
 
 
 if __name__ == '__main__':
@@ -335,4 +346,6 @@ if __name__ == '__main__':
     # work even for fairly tall simple prefix trees.
     import sys
     sys.setrecursionlimit(5000)
-    sample_melody_autocomplete()
+    # sample_melody_autocomplete()
+    result = sample_melody_autocomplete()
+
