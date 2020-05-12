@@ -1,17 +1,15 @@
-"""CSC148 Assignment 2: Autocomplete engines
-
-=== CSC148 Fall 2018 ===
-Department of Computer Science,
-University of Toronto
+"""Autocomplete engines
 
 === Module description ===
-This file contains starter code for the three different autocomplete engines
-you are writing for this assignment.
+This file contains code for the three different autocomplete engines:
 
-As usual, be sure not to change any parts of the given *public interface* in the
-starter code---and this includes the instance attributes, which we will be
-testing directly! You may, however, add new private attributes, methods, and
-top-level functions to this file.
+- LetterAutocompleteEngine   -> generates a list of words that start with a
+                                user-input character string.
+- SentenceAutocompleteEngine -> generates a list of sentences that start with
+                                a user-input character string.
+- MelodyAutocompleteEngine   -> generates a list of melodies that start with a
+                                melody input by the user as a character string.
+
 """
 from __future__ import annotations
 import csv
@@ -22,7 +20,7 @@ from prefix_tree import SimplePrefixTree, CompressedPrefixTree
 
 
 ################################################################################
-# Text-based Autocomplete Engines (Task 4)
+# Text-based Autocomplete Engines
 ################################################################################
 class LetterAutocompleteEngine:
     """An autocomplete engine that suggests strings based on a few letters.
@@ -31,8 +29,7 @@ class LetterAutocompleteEngine:
     This can include space characters.
 
     This autocomplete engine only stores and suggests strings with lowercase
-    letters, numbers, and space characters; see the section on
-    "Text sanitization" on the assignment handout.
+    letters, numbers, and space characters.
 
     === Attributes ===
     autocompleter: An Autocompleter used by this engine.
@@ -51,11 +48,12 @@ class LetterAutocompleteEngine:
 
         Each line of the specified file counts as one input string.
         Note that the line may or may not contain spaces.
-        Each string must be sanitized, and if the resulting string contains
+        Each string will be sanitized, and if the resulting string contains
         at least one alphanumeric character, it is inserted into the
         Autocompleter.
 
-        *Skip lines that do not contain at least one alphanumeric character!*
+        *Lines that do not contain at least one
+         alphanumeric character will be skipped*
 
         When each string is inserted, it is given a weight of one.
         Note that it is possible for the same string to appear on more than
@@ -67,9 +65,7 @@ class LetterAutocompleteEngine:
         elif config['autocompleter'] == 'compressed':
             self.autocompleter = CompressedPrefixTree(config['weight_type'])
 
-        # We've opened the file for you here. You should iterate over the
-        # lines of the file and process them according to the description in
-        # this method's docstring.
+        # Opens the file and iterates over the lines of the file
         with open(config['file'], encoding='utf8') as f:
             for line in f:
                 prefix = [c.lower() for c in line if c.isalnum() or c == ' ']
@@ -82,11 +78,11 @@ class LetterAutocompleteEngine:
         """Return up to <limit> matches for the given prefix string.
 
         The return value is a list of tuples (string, weight), and must be
-        ordered in non-increasing weight. (You can decide how to break ties.)
+        ordered in non-increasing weight.
 
         If limit is None, return *every* match for the given prefix.
 
-        Note that the given prefix string must be transformed into a list
+        Note that the given prefix string will be transformed into a list
         of letters before being passed to the Autocompleter.
 
         Preconditions:
@@ -99,7 +95,7 @@ class LetterAutocompleteEngine:
     def remove(self, prefix: str) -> None:
         """Remove all strings that match the given prefix string.
 
-        Note that the given prefix string must be transformed into a list
+        Note that the given prefix string will be transformed into a list
         of letters before being passed to the Autocompleter.
 
         Precondition: <prefix> contains only lowercase alphanumeric characters
@@ -117,8 +113,7 @@ class SentenceAutocompleteEngine:
     (separated by whitespace). The words themselves do not contain spaces.
 
     This autocomplete engine only stores and suggests strings with lowercase
-    letters, numbers, and space characters; see the section on
-    "Text sanitization" on the assignment handout.
+    letters, numbers, and space characters.
 
     === Attributes ===
     autocompleter: An Autocompleter used by this engine.
@@ -142,13 +137,13 @@ class SentenceAutocompleteEngine:
               string
 
         Note that the line may or may not contain spaces.
-        Each string must be sanitized, and if the resulting string contains
+        Each string will be sanitized, and if the resulting string contains
         at least one word, it is inserted into the Autocompleter.
 
         *Skip lines that do not contain at least one alphanumeric character!*
 
-        When each string is inserted, it is given THE WEIGHT SPECIFIED ON THE
-        LINE FROM THE CSV FILE. (Updated Nov 19)
+        When each string is inserted, it is given the weight specified on the
+        line from the csv file.
         Note that it is possible for the same string to appear on more than
         one line of the input file; this would result in that string getting
         a larger weight.
@@ -175,7 +170,7 @@ class SentenceAutocompleteEngine:
         """Return up to <limit> matches for the given prefix string.
 
         The return value is a list of tuples (string, weight), and must be
-        ordered in non-increasing weight. (You can decide how to break ties.)
+        ordered in non-increasing weight.
 
         If limit is None, return *every* match for the given prefix.
 
@@ -203,7 +198,7 @@ class SentenceAutocompleteEngine:
 
 
 ################################################################################
-# Melody-based Autocomplete Engines (Task 5)
+# Melody-based Autocomplete Engines
 ################################################################################
 class MelodyAutocompleteEngine:
     """An autocomplete engine that suggests melodies based on a few intervals.
@@ -233,7 +228,7 @@ class MelodyAutocompleteEngine:
         Precondition:
         The given file is a *CSV file* where each line has the following format:
             - The first entry is the name of a melody (a string).
-            - The remaining entries are grouped into pairs (as in Assignment 1)
+            - The remaining entries are grouped into pairs
               where the first number in each pair is a note pitch,
               and the second number is the corresponding duration.
 

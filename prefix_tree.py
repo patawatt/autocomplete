@@ -1,18 +1,9 @@
-"""CSC148 Assignment 2: Autocompleter classes
-
-=== CSC148 Fall 2018 ===
-Department of Computer Science,
-University of Toronto
+"""Autocompleter classes
 
 === Module Description ===
 This file contains the design of a public interface (Autocompleter) and two
-implementation of this interface, SimplePrefixTree and CompressedPrefixTree.
-You'll complete both of these subclasses over the course of this assignment.
+implementations of this interface, SimplePrefixTree and CompressedPrefixTree.
 
-As usual, be sure not to change any parts of the given *public interface* in the
-starter code---and this includes the instance attributes, which we will be
-testing directly! You may, however, add new private attributes, methods, and
-top-level functions to this file.
 """
 from __future__ import annotations
 from typing import Any, List, Optional, Tuple
@@ -22,7 +13,7 @@ from typing import Any, List, Optional, Tuple
 # The Autocompleter ADT
 ################################################################################
 class Autocompleter:
-    """An abstract class representing the Autocompleter Abstract Data Type.
+    """An abstract class representing the Autocompleter Abstract Data Type. The functions contain no implementation, as they will be implemeneted by subclasses.
     """
     def __len__(self) -> int:
         """Return the number of values stored in this Autocompleter.
@@ -73,14 +64,13 @@ class Autocompleter:
 
 
 ################################################################################
-# SimplePrefixTree (Tasks 1-3)
+# SimplePrefixTree
 ################################################################################
 class SimplePrefixTree(Autocompleter):
     """A simple prefix tree.
 
     This class follows the implementation described on the assignment handout.
-    Note that we've made the attributes public because we will be accessing them
-    directly for testing purposes.
+    Note that the attributes public as they will be accessed directly for testing purposes.
 
     === Attributes ===
     value:
@@ -580,7 +570,7 @@ class SimplePrefixTree(Autocompleter):
 
 
 ################################################################################
-# CompressedPrefixTree (Task 6)
+# CompressedPrefixTree
 ################################################################################
 class CompressedPrefixTree(SimplePrefixTree):
     """A compressed prefix tree implementation.
@@ -615,8 +605,7 @@ class CompressedPrefixTree(SimplePrefixTree):
         If len(self.subtrees) > 0, then self.value is a list (*common prefix*),
         and self.weight > 0 (*aggregate weight*).
 
-    - **NEW**
-      This tree does not contain any compressible internal values.
+    - This tree does not contain any compressible internal values.
       (See the assignment handout for a definition of "compressible".)
 
     - self.subtrees does not contain any empty prefix trees.

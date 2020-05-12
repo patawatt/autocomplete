@@ -1,14 +1,9 @@
-"""CSC148 Assignment 2: Music helper library
-
-=== CSC148 Fall 2018 ===
-Department of Computer Science,
-University of Toronto
+"""Music helper library
 
 === Module description ===
 This file contains some helpers used to convert between our integer-based
 representation of melodies and different music file formats.
 
-You should not change anything in this file.
 """
 import io
 from typing import List, Tuple
