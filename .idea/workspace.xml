@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c08567e2-250b-44b9-82e7-e770c76ec1c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autocomplete_engines.py" beforeDir="false" afterPath="$PROJECT_DIR$/autocomplete_engines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +23,7 @@
   </component>
   <component name="ProjectId" id="1bn4Br5u42iHhVDT0steKO6C6oT" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rb2020" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -40,11 +40,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.midi_Test">
+  <component name="RunManager" selected="Python.gui">
     <configuration name="autocomplete_engines" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="autocomplete" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -63,6 +66,9 @@
       <module name="autocomplete" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -81,6 +87,9 @@
       <module name="autocomplete" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -97,11 +106,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.gui" />
         <item itemvalue="Python.midi_Test" />
         <item itemvalue="Python.autocomplete_engines" />
         <item itemvalue="Python.autocomplete_engines" />
         <item itemvalue="Python.gui" />
-        <item itemvalue="Python.autocomplete_engines" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +132,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
