@@ -168,7 +168,7 @@ class SimplePrefixTree(Autocompleter):
 
     def subtree_vals(self) -> List:
         """ Returns a list of values of the trees in the list self.subtrees.
-                """
+        """
         items = []
         for subtree in self.subtrees:
             items.append(subtree.value)
